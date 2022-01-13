@@ -5,9 +5,9 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 /**
- * @Author: Carmine
- * @Date: 2021/12/24-11:36
- * @Description: 配置UserDetailsService实现类
+ * @author: Leemy
+ * @date: 2021/12/24-11:36
+ * @description: 配置UserDetailsService实现类
  */
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -19,7 +19,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginProcessingUrl("/loginController")
                 .defaultSuccessUrl("/successIndex").permitAll()
                 .and().authorizeRequests()
-                .antMatchers("/","/css/*","/images/*","/js/*").permitAll()
+                .antMatchers("/**","/css/*","/images/*","/js/*").permitAll()
 //                .antMatchers("/css/*","/images/*","/js/*").permitAll()
                 .anyRequest().authenticated()
                 .and().csrf().disable();
