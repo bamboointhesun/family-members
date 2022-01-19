@@ -2,9 +2,9 @@ server:
   port: 8059
 spring:
   datasource:
-    username: zhaochunping
-    password: RCTE29s5Bmm4GWu!
-    url: jdbc:mysql://8.136.12.248:3306/our_family?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: 
+    password: 
+    url: jdbc:mysql://127.0.0.1:3306/our_family?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver
   thymeleaf:
     cache: off
